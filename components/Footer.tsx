@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
           <p>&copy; {new Date().getFullYear()} GMADC. Todos os direitos reservados.</p>
-          <p>Feito com carinho para Marília.</p>
+          <p>Feito com carinho por Victor Carvalho</p>
         </div>
       </div>
     </footer>

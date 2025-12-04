@@ -28,7 +28,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900">Endereço</h4>
-                  <p className="text-gray-600">Rua Exemplo, 123 - Bairro Centro<br />Marília - SP, 17500-000</p>
+                  <p className="text-gray-600">R. Pernambuco, 735 - Banzato<br />Marília - SP, 17515-120</p>
                 </div>
               </div>
 
@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900">Telefone / WhatsApp</h4>
-                  <p className="text-gray-600">(14) 3400-0000</p>
+                  <p className="text-gray-600">(14) 3432-1297</p>
                 </div>
               </div>
 
@@ -51,47 +51,61 @@ const Contact: React.FC = () => {
                   <p className="text-gray-600">contato@gmadc.org.br</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center text-purple-600 flex-shrink-0">
                   <Clock size={20} />
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900">Horário de Atendimento</h4>
-                  <p className="text-gray-600">Segunda a Sexta: 08:00 - 17:00</p>
+                  <p className="text-gray-600">Segunda a Sexta: 8h às 17h</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Form Side */}
-          <div className="bg-white p-8 rounded-2xl shadow-lg">
-            <h3 className="text-xl font-bold text-gray-900 mb-6">Envie uma mensagem</h3>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="col-span-2 md:col-span-1">
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Nome</label>
-                  <input type="text" id="name" required className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all" placeholder="Seu nome" />
-                </div>
-                <div className="col-span-2 md:col-span-1">
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
-                  <input type="tel" id="phone" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all" placeholder="(14) 99999-9999" />
-                </div>
+          <div className="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-purple-600">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Envie uma Mensagem</h3>
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div>
+                <label htmlFor="name" className="block text-gray-700 text-sm font-medium mb-2">Nome Completo</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-200 transition-all" 
+                  placeholder="Seu nome" 
+                  required 
+                />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                <input type="email" id="email" required className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all" placeholder="seu@email.com" />
+                <label htmlFor="email" className="block text-gray-700 text-sm font-medium mb-2">Email</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-200 transition-all" 
+                  placeholder="seuemail@exemplo.com" 
+                  required 
+                />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Mensagem</label>
-                <textarea id="message" rows={4} required className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all" placeholder="Como podemos ajudar?"></textarea>
+                <label htmlFor="message" className="block text-gray-700 text-sm font-medium mb-2">Mensagem</label>
+                <textarea 
+                  id="message" 
+                  rows={5} 
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-200 transition-all resize-y" 
+                  placeholder="Sua mensagem..." 
+                  required 
+                />
               </div>
-              <button type="submit" className="w-full bg-purple-600 text-white font-bold py-4 rounded-lg hover:bg-purple-700 transition-colors shadow-md hover:shadow-lg">
+              <button 
+                type="submit" 
+                className="w-full bg-purple-600 text-white py-3 rounded-lg font-bold text-lg hover:bg-purple-700 transition-colors shadow-md"
+              >
                 Enviar Mensagem
               </button>
             </form>
           </div>
-
         </div>
       </div>
     </section>
